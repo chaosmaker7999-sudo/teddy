@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teddy Day Mehul 🧸💝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            transition: background 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Background colors for each section */
+        body.section-0 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffecd2 100%);
+        }
+        body.section-1 {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        body.section-2 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        body.section-3 {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        body.section-4 {
+            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+        }
+        body.section-5 {
+            background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+        }
+        body.section-6 {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+        body.section-7 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        body.section-8 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        body.section-9 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        body.section-10 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        body.section-11 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        body.section-12 {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        /* Floating Hearts */
+        .floating-heart {
+            position: fixed;
+            font-size: 2em;
+            animation: floatHearts 15s infinite;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Cursor Follower Teddy */
+        .cursor-teddy {
+            position: fixed;
+            font-size: 2em;
+            pointer-events: none;
+            z-index: 10000;
+            transition: all 0.1s ease;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-container {
+            display: none;
+            animation: fadeInScale 0.8s ease;
+        }
+
+        .section-container.active {
+            display: block;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .section-emoji {
+            font-size: 5em;
+            margin-bottom: 20px;
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #e91e63;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-text {
+            font-size: 1.3em;
+            color: #555;
+            line-height: 2;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .name-highlight {
+            color: #FF6B9D;
+            font-weight: bold;
+            font-size: 1.2em;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 107, 157, 0.8), 0 0 30px rgba(255, 107, 157, 0.6);
+            }
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, #FF6B9D 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255,107,157,0.4);
+            margin-top: 30px;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,107,157,0.6);
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #e91e63;
+            transform: scale(1.3);
+        }
+
+        /* Virtual Hug Button */
+        .hug-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 2em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255,107,157,0.4);
+            z-index: 1999;
+            transition: all 0.3s;
+            animation: hugPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes hugPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hug-button:hover {
+            transform: scale(1.2) !important;
+        }
+
+        .hug-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,107,157,0.6) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0;
+            z-index: 9998;
+            transition: opacity 0.5s;
+        }
+
+        .hug-overlay.active {
+            opacity: 1;
+        }
+
+        /* Secret Hearts */
+        .secret-heart {
+            position: fixed;
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 5;
+            animation: heartBob 2s ease-in-out infinite;
+            transition: all 0.3s;
+        }
+
+        @keyframes heartBob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .secret-heart:hover {
+            transform: scale(1.3) !important;
+        }
+
+        .love-note-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            z-index: 10001;
+            max-width: 400px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .love-note-popup.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .love-note-popup h3 {
+            color: #e91e63;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .love-note-popup p {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .close-note {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #FF6B9D 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .close-note:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,107,157,0.4);
+        }
+
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 2000;
+            transition: all 0.3s;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Golden Teddy Hunt */
+        .teddy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px auto;
+            max-width: 300px;
+        }
+
+        .teddy-piece {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #ffb3ba 0%, #ffc4d6 100%);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .teddy-piece:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .teddy-piece.found {
+            background: linear-gradient(135deg, gold 0%, #FFD700 100%);
+            animation: pulse 0.5s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .tries-counter {
+            font-size: 1.2em;
+            color: #e91e63;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .sparkle {
+            animation: sparkle 1s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .gift-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B9D 0%, #e91e63 100%);
+            color: white;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255,107,157,0.4);
+        }
+
+        .gift-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255,107,157,0.6);
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe6f0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            border: 2px solid #ff6b9d;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            font-style: italic;
+        }
+
+        .love-blast {
+            position: fixed;
+            font-size: 2em;
+            pointer-events: none;
+            z-index: 9999;
+            animation: loveBlast 1s ease-out forwards;
+        }
+
+        @keyframes loveBlast {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(3);
+                opacity: 0;
+            }
+        }
+
+        .heart-particle {
+            position: fixed;
+            font-size: 1.5em;
+            pointer-events: none;
+            z-index: 9999;
+            animation: heartExplode 1.5s ease-out forwards;
+        }
+
+        @keyframes heartExplode {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Love Letter Generator */
+        .love-letter-content {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe6f0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            font-style: italic;
+            border: 2px solid #ff6b9d;
+            min-height: 150px;
+        }
+
+        .generate-letter-btn {
+            background: linear-gradient(135deg, #FF6B9D 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255,107,157,0.3);
+            margin: 10px;
+        }
+
+        .generate-letter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,107,157,0.5);
+        }
+    </style>
+</head>
+<body class="section-0">
+    <button class="music-control" id="musicBtn" onclick="toggleMusic()">🎵</button>
+    <button class="hug-button" onclick="sendVirtualHug()">🤗</button>
+    <div class="hug-overlay" id="hugOverlay"></div>
+    <div class="cursor-teddy" id="cursorTeddy">🧸</div>
+    
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <!-- Section 0: Welcome -->
+        <div class="section-container active" data-section="0">
+            <div class="card">
+                <div class="section-emoji">🧸</div>
+                <h1 class="section-title">Happy Teddy Day</h1>
+                <p style="font-size: 1.5em; color: #666;">To My Cuddliest</p>
+                <p class="name-highlight" style="font-size: 2em; margin: 20px 0;">Mehul</p>
+                <p style="font-size: 1.1em; color: #888; margin: 30px 0;">A journey of love, cuddles, and sweet surprises awaits you...</p>
+                <p style="font-size: 0.9em; color: #999;">💡 Look for hidden hearts around the page! 💕</p>
+                <button class="next-btn" onclick="nextSection()">Begin Journey 💝</button>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section-container" data-section="1">
+            <div class="card">
+                <div class="section-emoji">🧸</div>
+                <h2 class="section-title">Soft Like A Teddy</h2>
+                <p class="section-text">
+                    Just like a teddy bear brings comfort with its soft embrace, <span class="name-highlight">Mehul</span>, you've brought warmth and comfort into my life from the very first moment. Your presence is like holding the softest, most precious teddy - it makes everything feel safe, warm, and absolutely perfect. 💝
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-container" data-section="2">
+            <div class="card">
+                <div class="section-emoji">🐻</div>
+                <h2 class="section-title">My Cuddle Buddy</h2>
+                <p class="section-text">
+                    You know what makes a teddy bear special? It's always there when you need it. That's exactly what you are in my life, <span class="name-highlight">Mehul</span>. You're my perfect cuddle buddy, my comfort in tough times, and my joy in happy moments. You bring coziness, love, and happiness to every single moment we share together. 🌸
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section-container" data-section="3">
+            <div class="card">
+                <div class="section-emoji">🐨</div>
+                <h2 class="section-title">Forever My Favorite</h2>
+                <p class="section-text">
+                    Like how a teddy bear is a child's favorite companion, you're my favorite person in the entire world, <span class="name-highlight">Mehul</span>. Every laugh we share, every moment we create, every memory we make is warmer because you're in it. You're my absolute favorite. You complete me in the most adorable way possible. 🎀
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section-container" data-section="4">
+            <div class="card">
+                <div class="section-emoji">🎀</div>
+                <h2 class="section-title">Cutest Surprise</h2>
+                <p class="section-text">
+                    Every moment with you, <span class="name-highlight">Mehul</span>, is like receiving the cutest teddy bear - you never know what adorable surprise awaits, but you know it's going to melt your heart. Your smile surprises me with warmth, your laugh fills me with joy. Every day with you brings a new reason to fall deeper in love. 🌈
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section-container" data-section="5">
+            <div class="card">
+                <div class="section-emoji">💝</div>
+                <h2 class="section-title">Cuddlier Than Any Teddy</h2>
+                <p class="section-text">
+                    People say teddy bears are the cuddliest companions, but <span class="name-highlight">Mehul</span>, being with you is better than any teddy bear ever created. When I'm with you, my entire world feels warm and cozy like a thousand soft hugs. No teddy bear could ever compare to the comfort you bring. 💫
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section-container" data-section="6">
+            <div class="card">
+                <div class="section-emoji">🎈</div>
+                <h2 class="section-title">From My Heart</h2>
+                <p class="section-text">
+                    Each beat of my heart whispers your name, <span class="name-highlight">Mehul</span>. You're my reason for smiling, my source of comfort, and my greatest blessing. Just thinking about you fills me with pure happiness. You've become such an important part of my life that I can't imagine a single day without you. 💕
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section-container" data-section="7">
+            <div class="card">
+                <div class="section-emoji">🌟</div>
+                <h2 class="section-title">Perfect Together</h2>
+                <p class="section-text">
+                    Some things are just meant to be together - like a child and their teddy bear, like you and me, <span class="name-highlight">Mehul</span>. You complete me in ways I never knew I needed. You're my perfect cuddle buddy, my better half, my favorite person. Together, we create something beautiful. 🌟
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section-container" data-section="8">
+            <div class="card">
+                <div class="section-emoji">🌺</div>
+                <h2 class="section-title">Extraordinary Warmth</h2>
+                <p class="section-text">
+                    <span class="name-highlight">Mehul</span>, you have this magical ability to turn my ordinary days into something extraordinarily cozy. A simple moment with you feels like cuddling the softest teddy bear. Your presence adds warmth to every moment, comfort to every experience, and meaning to every day. 💐
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="section-container" data-section="9">
+            <div class="card">
+                <div class="section-emoji">🤗</div>
+                <h2 class="section-title">Endless Cuddles</h2>
+                <p class="section-text">
+                    My love for you, <span class="name-highlight">Mehul</span>, is like an endless collection of teddy bears - it never runs out, it never gets old, and it only gets softer with time. You're the warmth that never fades, the comfort that never ends. My heart has infinite cuddles for you, today, tomorrow, and always. 🌹
+                </p>
+                <button class="next-btn" onclick="nextSection()">Next 💕</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="section-container" data-section="10">
+            <div class="card">
+                <div class="section-emoji">🌹</div>
+                <h2 class="section-title">My Cuddliest Blessing</h2>
+                <p class="section-text">
+                    Thank you, <span class="name-highlight">Mehul</span>, for being the teddy to my every day, the warmth to my life, and the comfort to my heart. On this Teddy Day and every day, I want you to know how incredibly special you are to me. You're my forever favorite teddy. 🧸💝✨
+                </p>
+                <button class="next-btn" onclick="nextSection()">Continue to Surprise 🎁</button>
+                <div class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 11: Golden Teddy Hunt -->
+        <div class="section-container" data-section="11">
+            <div class="card">
+                <h2 class="section-title">🎁 Special Surprise! 🎁</h2>
+                <p style="font-size: 1.2em; color: #666; margin: 20px 0;">You've unlocked all the messages! Now find the golden teddy to reveal your gift...</p>
+                
+                <div class="tries-counter" id="triesCounter">Tries: 0</div>
+                <div class="teddy-grid">
+                    <div class="teddy-piece" onclick="checkTeddy(this, 0)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 1)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 2)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 3)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 4)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 5)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 6)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 7)">🧸</div>
+                    <div class="teddy-piece" onclick="checkTeddy(this, 8)">🧸</div>
+                </div>
+                <p style="font-size: 0.9em; color: #999; margin-top: 20px;">Find the <span class="sparkle">✨golden teddy✨</span> to unlock your treat!</p>
+            </div>
+        </div>
+
+        <!-- Section 12: Final Gift -->
+        <div class="section-container" data-section="12">
+            <div class="card">
+                <h2 class="section-title">🎉 Your Cuddly Gift! 🎉</h2>
+                <div style="font-size: 6em; margin: 30px 0;">🧸</div>
+                <p style="font-size: 1.3em; color: #666;">Because you deserve all the warmth and sweetness, <span class="name-highlight">Mehul</span>!</p>
+                <p style="font-size: 1.1em; color: #888; margin: 20px 0;">Order your favorite treats on me! 💝</p>
+                <a href="https://www.zepto.com/pn/webby-octopus-with-keychain-plush-stuffed-animal-toy-assorted-1piece/pvid/ead88461-86ca-419f-afb4-0a30fe476600?marketplaceType=SUPER_SAVER" class="gift-link" target="_blank">
+                    Claim Your Treat! 🧸✨
+                </a>
+                <div style="font-size: 3em; margin: 30px 0;">🎉🧸💕✨🎊</div>
+                
+                <div class="final-message">
+                    P.S. - The real gift is you, <span class="name-highlight">Mehul</span>. You're the teddy bear that makes my life complete, the warmth that never fades, and the love that grows stronger every single day. Thank you for being my cuddliest blessing! 💖🧸
+                </div>
+
+                <!-- Love Letter Generator -->
+                <div style="margin-top: 40px;">
+                    <h3 style="color: #e91e63; margin-bottom: 20px;">💌 Want More Love? 💌</h3>
+                    <div class="love-letter-content" id="loveLetterContent">
+                        Click below for a randomly generated love letter just for you! ✨
+                    </div>
+                    <button class="generate-letter-btn" onclick="generateLoveLetter()">Generate Love Letter 💕</button>
+                </div>
+                
+                <p style="font-style: italic; color: #888; margin-top: 40px; font-size: 1.2em;">Happy Teddy Day, my cutest! 💖</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Love Note Popup -->
+    <div class="love-note-popup" id="loveNotePopup">
+        <h3>💕 Secret Love Note</h3>
+        <p id="loveNoteText"></p>
+        <button class="close-note" onclick="closeLoveNote()">Close 💖</button>
+    </div>
+
+    <script>
+        let currentSection = 0;
+        let tries = 0;
+        let goldenTeddy = Math.floor(Math.random() * 9);
+        let musicPlaying = false;
+        const music = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+
+        // Secret love notes
+        const secretNotes = [
+            "You're adorable! 🧸",
+            "Best cuddle buddy ever! 🤗",
+            "You make my heart smile! 💕",
+            "Forever grateful for you! 🌟",
+            "You're my favorite person! 💝",
+            "Cutest human alive! 🎀",
+            "My heart belongs to you! 💖",
+            "You're absolutely perfect! ✨"
+        ];
+
+        // Love letter phrases
+        const letterOpeners = [
+            "My dearest Mehul, from the moment you entered my life",
+            "To my cuddliest companion, every single day with you",
+            "Dear Mehul, like a teddy bear brings comfort",
+            "My sweet Mehul, you've transformed my world",
+            "To the love of my life, your presence"
+        ];
+
+        const letterMiddles = [
+            "fills my heart with warmth and joy that never fades",
+            "reminds me of how lucky I am to have found you",
+            "brings a smile to my face and peace to my soul",
+            "creates moments of pure happiness and endless love",
+            "makes every ordinary moment feel extraordinary"
+        ];
+
+        const letterEndings = [
+            "I'm forever grateful for you, my cuddliest blessing. All my love, always. 💕🧸",
+            "You're my favorite everything, today and forever. With endless cuddles, yours always. 🧸💖",
+            "Thank you for being the teddy to my every day. Love you infinity times infinity! 💝✨",
+            "You complete me in the most perfect way. Forever your cuddle buddy. 🤗💕",
+            "You're not just special - you're absolutely everything to me. Love always. 💖🧸"
+        ];
+
+        // Initialize
+        window.onload = function() {
+            createFloatingHearts();
+            createSecretHearts();
+            moveCursorTeddy();
+        };
+
+        // Cursor following teddy
+        function moveCursorTeddy() {
+            const cursorTeddy = document.getElementById('cursorTeddy');
+            let mouseX = 0, mouseY = 0;
+            let teddyX = 0, teddyY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateTeddy() {
+                teddyX += (mouseX - teddyX) * 0.1;
+                teddyY += (mouseY - teddyY) * 0.1;
+                cursorTeddy.style.left = teddyX + 'px';
+                cursorTeddy.style.top = teddyY + 'px';
+                requestAnimationFrame(animateTeddy);
+            }
+            animateTeddy();
+        }
+
+        // Create floating hearts
+        function createFloatingHearts() {
+            const hearts = ['💕', '💖', '💗', '💓', '💝', '❤️', '💞', '🧸'];
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 15 + 's';
+                heart.style.fontSize = (1 + Math.random() * 1.5) + 'em';
+                document.body.appendChild(heart);
+            }
+        }
+
+        // Create secret hearts
+        function createSecretHearts() {
+            const positions = [
+                {left: '10%', top: '20%'},
+                {left: '90%', top: '25%'},
+                {left: '15%', top: '60%'},
+                {left: '85%', top: '70%'},
+                {left: '50%', top: '10%'},
+                {left: '30%', top: '85%'},
+                {left: '70%', top: '90%'},
+                {left: '5%', top: '50%'}
+            ];
+
+            positions.forEach((pos, index) => {
+                const heart = document.createElement('div');
+                heart.className = 'secret-heart';
+                heart.textContent = '💖';
+                heart.style.left = pos.left;
+                heart.style.top = pos.top;
+                heart.style.animationDelay = (index * 0.3) + 's';
+                heart.onclick = function() {
+                    showLoveNote(index);
+                    this.style.display = 'none';
+                };
+                document.body.appendChild(heart);
+            });
+        }
+
+        function showLoveNote(index) {
+            const popup = document.getElementById('loveNotePopup');
+            const text = document.getElementById('loveNoteText');
+            text.textContent = secretNotes[index % secretNotes.length];
+            popup.classList.add('show');
+            createHeartExplosion();
+        }
+
+        function closeLoveNote() {
+            document.getElementById('loveNotePopup').classList.remove('show');
+        }
+
+        function createHeartExplosion() {
+            const hearts = ['💕', '💖', '💗', '💓', '💝'];
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart-particle';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = '50%';
+                heart.style.top = '50%';
+                heart.style.setProperty('--tx', (Math.random() - 0.5) * 400 + 'px');
+                heart.style.setProperty('--ty', (Math.random() - 0.5) * 400 + 'px');
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 1500);
+            }
+        }
+
+        // Virtual Hug
+        function sendVirtualHug() {
+            const overlay = document.getElementById('hugOverlay');
+            overlay.classList.add('active');
+            
+            const hugMsg = document.createElement('div');
+            hugMsg.style.position = 'fixed';
+            hugMsg.style.top = '50%';
+            hugMsg.style.left = '50%';
+            hugMsg.style.transform = 'translate(-50%, -50%)';
+            hugMsg.style.fontSize = '3em';
+            hugMsg.style.zIndex = '9999';
+            hugMsg.style.animation = 'pulse 1s ease';
+            hugMsg.style.textAlign = 'center';
+            hugMsg.textContent = '🤗 Sending you the warmest hug! 💕';
+            document.body.appendChild(hugMsg);
+
+            createHeartExplosion();
+
+            setTimeout(() => {
+                overlay.classList.remove('active');
+                hugMsg.remove();
+            }, 2000);
+        }
+
+        // Navigation
+        function nextSection() {
+            const sections = document.querySelectorAll('.section-container');
+            sections[currentSection].classList.remove('active');
+            currentSection++;
+            sections[currentSection].classList.add('active');
+            
+            // Change background color
+            document.body.className = `section-${currentSection}`;
+            
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Golden Teddy Hunt
+        function checkTeddy(element, index) {
+            tries++;
+            document.getElementById('triesCounter').textContent = 'Tries: ' + tries;
+            
+            if (index === goldenTeddy) {
+                element.classList.add('found');
+                element.textContent = '✨';
+                createConfetti();
+                
+                setTimeout(() => {
+                    nextSection();
+                }, 1500);
+            } else {
+                element.style.animation = 'shake 0.5s';
+                element.textContent = '❌';
+                
+                setTimeout(() => {
+                    element.textContent = '🧸';
+                    element.style.animation = '';
+                }, 500);
+            }
+        }
+
+        function createConfetti() {
+            const colors = ['#FF6B9D', '#ffc4d6', '#ffb3ba', '#FFD93D', '#f06292', '#e91e63'];
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-10px';
+                confetti.style.animation = 'confetti-fall ' + (2 + Math.random() * 2) + 's linear';
+                confetti.style.zIndex = '9999';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+
+        // Add confetti animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes confetti-fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Love Letter Generator
+        function generateLoveLetter() {
+            const opener = letterOpeners[Math.floor(Math.random() * letterOpeners.length)];
+            const middle = letterMiddles[Math.floor(Math.random() * letterMiddles.length)];
+            const ending = letterEndings[Math.floor(Math.random() * letterEndings.length)];
+            
+            const letter = `${opener}, ${middle}. ${ending}`;
+            
+            const content = document.getElementById('loveLetterContent');
+            content.style.opacity = '0';
+            
+            setTimeout(() => {
+                content.textContent = letter;
+                content.style.opacity = '1';
+                createHeartExplosion();
+            }, 300);
+        }
+
+        function toggleMusic() {
+            if (music.src && music.src !== window.location.href) {
+                if (musicPlaying) {
+                    music.pause();
+                    musicBtn.textContent = '🔇';
+                    musicPlaying = false;
+                } else {
+                    music.play().catch(e => {
+                        console.log('Music play failed:', e);
+                        musicBtn.textContent = '❌';
+                    });
+                    musicBtn.textContent = '🔊';
+                    musicPlaying = true;
+                }
+            } else {
+                musicBtn.textContent = '🎵';
+            }
+        }
+
+        let musicInitialized = false;
+        document.addEventListener('click', function initMusic(e) {
+            if (e.target.id === 'musicBtn') return;
+            
+            if (!musicInitialized && music.src && music.src !== window.location.href) {
+                music.play().then(() => {
+                    musicPlaying = true;
+                    musicBtn.textContent = '🔊';
+                    musicInitialized = true;
+                }).catch(e => {
+                    musicBtn.textContent = '🎵';
+                });
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.next-btn') || 
+                e.target.id === 'musicBtn' || 
+                e.target.closest('.hug-button') ||
+                e.target.closest('.secret-heart') ||
+                e.target.closest('.teddy-piece') ||
+                e.target.closest('.love-note-popup') ||
+                e.target.closest('.generate-letter-btn') ||
+                e.target.closest('.gift-link')) {
+                return;
+            }
+            createLoveBlast(e.clientX, e.clientY);
+        });
+
+        function createLoveBlast(x, y) {
+            const blastHeart = document.createElement('div');
+            blastHeart.className = 'love-blast';
+            blastHeart.textContent = '💖';
+            blastHeart.style.left = x + 'px';
+            blastHeart.style.top = y + 'px';
+            document.body.appendChild(blastHeart);
+            
+            setTimeout(() => blastHeart.remove(), 1000);
+
+            const hearts = ['💕', '💖', '💗', '💓', '💝', '❤️', '💞', '🧸'];
+            const particleCount = 8;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'heart-particle';
+                particle.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const distance = 100 + Math.random() * 100;
+                const tx = Math.cos(angle) * distance;
+                const ty = Math.sin(angle) * distance;
+                
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                
+                document.body.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1500);
+            }
+        }
+    </script>
+</body>
+</html>
